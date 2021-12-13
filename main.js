@@ -11,11 +11,26 @@ const jobTypes = {
 
 // Your code will go here
 
+class CrewMember {
+  constructor(name, job, specialSkill, ship){
+    this.name = name;
+    this.job = job;
+    this.specialSkill = specialSkill;
+    this.ship = ship;
+  }
+//Make sure Crew Members can enter Ships
+enterShip(ship) {
+  this.ship = ship;
+  this.ship.crew.push(this);
+}
+}
+//crewMember1
+var crewMember1 = new CrewMember('Rick Martinez', 'pilot', 'chemistry');
 
+//crewMember2
 
-
-
-
+//Build a class for Ship
+//Make sure return a mission statement
 
 // Begin by reading the tests and building a function that will full each one.
 // As you build, you might not have to build them in order, maybe you do...
