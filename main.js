@@ -28,8 +28,26 @@ enterShip(ship) {
 var crewMember1 = new CrewMember('Rick Martinez', 'pilot', 'chemistry');
 
 //crewMember2
+var crewMember2 = new CrewMember('Commander Lewis', 'commander', 'geology');
 
 //Build a class for Ship
+
+class Ship {
+  constructor(name, type, ability){
+    this.name = name;
+    this.type = type;
+    this.ability = ability;
+    this.crew = [];
+  }
+  missionStatement() {
+    if (this.crew.length === 0) {
+      return "Can't perform a mission yet."
+    } else {
+      return this.ability;
+    }
+  }
+}
+let mav = new Ship('Mars Ascent Vehicle', 'MAV', 'Ascend into low orbit');
 //Make sure return a mission statement
 
 // Begin by reading the tests and building a function that will full each one.
